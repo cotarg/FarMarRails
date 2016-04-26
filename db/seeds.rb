@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'csv'
 
-markets = csv.read('/seed_csvs/markets.csv', :headers => true)
+markets = CSV.read('seed_csvs/markets.csv', :headers => true)
 market_hash = {}
 markets.each do |row|
   market_hash[:market_id] = row[0].to_i
@@ -16,12 +16,12 @@ markets.each do |row|
   market_hash[:city] = row[3].to_s
   market_hash[:county] = row[4].to_s
   market_hash[:state] = row[5].to_s
-  market_hash[:zip] = row[6].to_i
+  market_hash[:zip_code] = row[6].to_i
   Market.create(market_hash)
 end
 
 
-products = csv.read('/seed_csvs/products.csv', :headers => true)
+products = CSV.read('seed_csvs/products.csv', :headers => true)
 product_hash = {}
 products.each do |row|
   product_hash[:product_id] = row[0].to_i
@@ -31,7 +31,7 @@ products.each do |row|
 end
 
 
-sales = csv.read('/seed_csvs/sales.csv', :headers => true)
+sales = CSV.read('seed_csvs/sales.csv', :headers => true)
 sale_hash = {}
 sales.each do |row|
   sale_hash[:sale_id] = row[0].to_i
@@ -43,7 +43,7 @@ sales.each do |row|
 end
 
 
-vendors = csv.read('/seed_csvs/vendors.csv', :headers => true)
+vendors = CSV.read('seed_csvs/vendors.csv', :headers => true)
 vendor_hash = {}
 vendors.each do |row|
   vendor_hash[:vendor_id] = row[0].to_i
