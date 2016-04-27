@@ -3,6 +3,6 @@
 <%=@markets.each do |market| %>
 <div class = "market">
 <%= link_to market.name, market_path(market.id) %>
-<%= market.state %>, <%= market.city%>
+<%= market.city%>, <%= market.state %>
 </div>
 <%end%>

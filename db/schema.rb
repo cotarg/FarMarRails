@@ -11,19 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426221918) do
+ActiveRecord::Schema.define(version: 20160427220429) do
 
   create_table "markets", force: :cascade do |t|
     t.integer  "market_id"
-    t.integer  "primary_key"
-    t.text     "name",        null: false
+    t.text     "name",       null: false
     t.text     "address"
     t.text     "city"
     t.text     "county"
     t.text     "state"
     t.integer  "zip_code"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|
