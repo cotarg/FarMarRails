@@ -12655,3 +12655,28 @@ Migrating to CreateVendors (20160426221918)
   [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
   [1m[36mMarket Load (1.1ms)[0m  [1mSELECT  "markets".* FROM "markets" WHERE "markets"."id" = ? LIMIT 1[0m  [["id", 24]]
   [1m[35mVendor Load (1.0ms)[0m  SELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = ?  [["id", 8]]
+
+
+Started GET "/" for ::1 at 2016-04-27 09:03:27 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 198ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-27 09:03:28 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.5ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-27 09:11:23 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-27 09:11:36 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
