@@ -1,4 +1,28 @@
 Rails.application.routes.draw do
+  get '/' => 'users#index'
+
+  resources :markets
+
+  get '/vendors/new', to: "vendors#new"
+  post '/vendors', to: "vendors#create"#UNSURE ABOUT THIS ONE
+  get '/vendors/:id/edit', to: "vendors#edit"
+  patch '/vendors/:id', to: "vendors#update"
+  delete '/vendors/:id', to: "vendors#destroy"
+
+  get '/products/new', to: "products#new"
+  post '/products/', to: "products#create"
+  get '/products/:id/edit', to: "products#edit"
+  patch '/products/:id', to: "products#update"
+  delete '/products/', to: "products#destroy"
+
+  get '/sales/new', to: "sales#new"
+  post '/sales/', to: "sales#create"
+  get '/sales/', to: "sales#index"
+
+  #I'm unsure about many of these routes because I'm confused by markets creating vendors, users viewing markets, and vendors creating all the things. Let's go over it before continuing!
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
