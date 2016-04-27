@@ -1,8 +1,11 @@
+
+<%= link_to "Create a market", new_market%>
 <h2>All markets:</h2>
 
-<%=@markets.each do |market| %>
-<div class = "market">
-<%= link_to market.name, market_path(market.id) %>
-<%= market.city%>, <%= market.state %>
-</div>
+<%@markets.each do |market| %>
+  <div class = "market">
+    <%= link_to market.name, market_path(market.market_id) %>
+    <%= market.city%>, <%= market.state%>
+    <%= link_to "Edit", edit_market(market.market_id)%>
+  </div>
 <%end%>
