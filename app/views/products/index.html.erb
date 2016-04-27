@@ -1,3 +1,6 @@
-<% @products.each do |product| %>
 
-	<li class="product"><%= product.id %>. <%= product.item %>
+<ul>
+	<% @products.each do |product| %>
+		<li class="product"><%= product.id %>. <%= product.item %>
+	<%end%>
+</ul>
