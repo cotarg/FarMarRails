@@ -2,7 +2,7 @@ class MarketsController < ApplicationController
 
 
   def index #VIEWED BY USER
-    @markets = Market.all
+    @markets = Market.order(name: :asc)
     render :index
   end
 
@@ -27,7 +27,7 @@ class MarketsController < ApplicationController
   end
 
   def show
-    @market = Market.find(params[:market_id])
+    @market = Market.find(params[:id])
     render :show
   end
 
@@ -42,5 +42,13 @@ class MarketsController < ApplicationController
     @markets = Market.all
     render :index  #Same as update: If time at end, render not-index
   end
+
+
+
+  private
+  def create_market_params
+    params.permit(market: [:name, :address, :city, :state, :zip_code, market_id: :id])
+  end
+
 
 end
