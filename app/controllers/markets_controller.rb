@@ -1,5 +1,6 @@
 class MarketsController < ApplicationController
 
+
   def index #VIEWED BY USER
     @markets = Market.all
     render :index
@@ -41,5 +42,5 @@ class MarketsController < ApplicationController
     @markets = Market.all
     render :index  #Same as update: If time at end, render not-index
   end
-  
+
 end

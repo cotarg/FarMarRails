@@ -12680,3 +12680,117 @@ Started GET "/" for ::1 at 2016-04-27 09:11:36 -0700
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
 Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-27 09:28:54 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"markets"} missing required keys: [:id]):
+    1: <p class="front-page">I am a:<br>
+    2: 	<%= link_to "Market", market_path %>
+    3: 	<%= link_to "Vendor", vendor_path %>
+    4: 	<%= link_to "Generic User", user_show_path %>
+  app/views/users/index.html.erb:2:in `_app_views_users_index_html_erb__1712371042687059322_70282118906500'
+  app/controllers/users_controller.rb:3:in `index'
+
+
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.6ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.3ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (142.1ms)
+
+
+Started GET "/" for ::1 at 2016-04-27 09:30:13 -0700
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (38.6ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `user_show_path' for #<#<Class:0x007fd7a9e78f28>:0x007fd7a95a0bd0>):
+    1: <p class="front-page">I am a:<br>
+    2: 	<%= link_to "Market", markets_path %>
+    3: 	<%= link_to "Vendor", vendors_path %>
+    4: 	<%= link_to "Generic User", user_show_path %>
+  app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb__1712371042687059322_70282117962680'
+  app/controllers/users_controller.rb:3:in `index'
+
+
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.0ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (45.4ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/rowan/.rvm/gems/ruby-2.3.0@FarMarRails/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (110.4ms)
+
+
+Started GET "/" for ::1 at 2016-04-27 09:30:25 -0700
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2079ms (Views: 2078.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/markets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/assets/sales.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/assets/markets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/assets/sales.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-27 09:30:27 -0700
+
+
+Started GET "/markets" for ::1 at 2016-04-27 09:30:31 -0700
+Processing by MarketsController#index as HTML
+  Rendered markets/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms)
