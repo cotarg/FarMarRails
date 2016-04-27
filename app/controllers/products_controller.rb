@@ -9,6 +9,9 @@ class ProductsController < ApplicationController
 	def create
 	end
 
+	def destroy
+	end
+
   def product_create_params
     params.permit(product: [:name, ]) # these need to be finished with which params need to be let through
   end
