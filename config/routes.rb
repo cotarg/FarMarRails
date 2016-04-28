@@ -12,10 +12,10 @@ Rails.application.routes.draw do
   get '/products/new', to: "products#new"
   post '/products/', to: "products#create"
   get '/products/:id/edit', to: "products#edit"
-  get '/products/vendor/:id/', to: "products#show"
+  get '/products/vendor/:id/', to: "products#show", as: "products_show"
   patch '/products/:id', to: "products#update"
   get '/products/', to: "products#index"
-  delete '/products/', to: "products#destroy"
+  delete '/products/:id', to: "products#destroy"
 
   get '/sales/new', to: "sales#new"
   post '/sales/', to: "sales#create"
