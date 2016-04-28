@@ -5,6 +5,11 @@ class ProductsController < ApplicationController
 		render :index
 	end
 
+	def show
+    @vendor = Vendor.find(params[:id])
+    render :detail_view
+  end
+
 	def new
 	end
 
