@@ -1,6 +1,5 @@
 class SalesController < ApplicationController
-	belongs_to :product
-	belongs_to :vendor
+
 
 	def index
 	end
