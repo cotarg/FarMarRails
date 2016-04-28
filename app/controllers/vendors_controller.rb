@@ -33,10 +33,11 @@ class VendorsController < ApplicationController
     render :index  #IF time at end, render a "newly created" view for proofread, avoid list of all vendors / index, because vendors aren't supposed to see other vendors
   end
 
-  def destroy
+
+  def delete
     @vendor = Vendor.find(params[:id]).destroy
     @vendors = Vendor.order(state: :asc, city: :asc)
-    render :index  #Same as update: If time at end, render not-index
+    redirect_to markets_path  #Same as update: If time at end, render not-index
   end
 
 

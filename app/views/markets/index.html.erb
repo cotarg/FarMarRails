@@ -17,9 +17,11 @@
 <h2>All vendors:</h2>
 <%@vendors.each do |vendor| %>
   <div class = "vendor">
-    <%= vendor.name %>
-    <%= Market.find(vendor.market_id) %>
+    <b><%= vendor.name %></b>,
+    <%= Market.find(vendor.market_id).name %>
     <%= link_to "Edit", edit_vendor_path(vendor.id)%>
-    <%= link_to "Delete", destroy_vendor_path(vendor.id)%>
+    <%= button_to delete_vendor_path(vendor.id), data: {confirm: "DELETE DIS SHIT??"}, method: :delete do%>
+    <i class="fa fa-trash" aria-hidden="true"></i>
+    <%end%>
   </div>
 <%end%>

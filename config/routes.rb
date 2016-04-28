@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post '/vendors', to: "vendors#create"
   get '/vendors/:id/edit', to: "vendors#edit", as: "edit_vendor"
   patch '/vendors/:id', to: "vendors#update"
-  delete '/vendors/:id', to: "vendors#destroy", as: "destroy_vendor"
+  delete '/vendors/:id', to: "vendors#delete", as: "delete_vendor"
 
   get '/products/new', to: "products#new"
   get '/products', to: "products#index"
