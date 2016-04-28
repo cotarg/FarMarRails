@@ -1,6 +1,7 @@
 class MarketsController < ApplicationController
 
   def index #VIEWED BY USER
+    @vendors = Vendor.order(name: :asc)
     @markets = Market.order(state: :asc, city: :asc)
     render :index
   end

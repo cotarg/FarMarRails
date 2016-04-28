@@ -3,11 +3,11 @@ Rails.application.routes.draw do
 
   resources :markets
 
-  get '/vendors/new', to: "vendors#new"
-  post '/vendors', to: "vendors#create"#UNSURE ABOUT THIS ONE
-  get '/vendors/:id/edit', to: "vendors#edit"
+  get '/vendors/new', to: "vendors#new", as: "new_vendor"
+  post '/vendors', to: "vendors#create"
+  get '/vendors/:id/edit', to: "vendors#edit", as: "edit_vendor"
   patch '/vendors/:id', to: "vendors#update"
-  delete '/vendors/:id', to: "vendors#destroy"
+  delete '/vendors/:id', to: "vendors#destroy", as: "destroy_vendor"
 
   get '/products/new', to: "products#new"
   get '/products', to: "products#index"
