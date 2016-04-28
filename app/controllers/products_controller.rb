@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+	belongs_to :vendor
+	has_many :sales
+
 
 	def index
 		@products = Product.order(id: :asc)
