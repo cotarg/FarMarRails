@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   delete '/vendors/:id', to: "vendors#destroy"
 
   get '/products/new', to: "products#new"
+  get '/products', to: "products#index"
   post '/products/', to: "products#create"
   get '/products/:id/edit', to: "products#edit"
   patch '/products/:id', to: "products#update"

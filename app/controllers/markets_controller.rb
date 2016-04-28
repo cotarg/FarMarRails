@@ -1,5 +1,6 @@
 class MarketsController < ApplicationController
 
+  has_many :vendors
 
   def index #VIEWED BY USER
     @markets = Market.order(name: :asc)
