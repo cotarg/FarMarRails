@@ -17,6 +17,10 @@ class ProductsController < ApplicationController
 	end
 
 	def destroy
+   killed_record = Product.destroy(params[:id])
+   if params[:id] = true 
+     redirect_to products_show_path(killed_record.vendor_id)
+   end 
 	end
 
   def product_create_params
