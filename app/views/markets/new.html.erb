@@ -21,4 +21,6 @@
   <%= f.label :zip_code do %>
     <%= f.text_field :zip_code, placeholder: "98104"%>
   <%end%>
-  <%=end%>
+  <% f.hidden_field :market_id, value: :id %>
+  <%= f.submit %>
+<%end%>
