@@ -6,7 +6,11 @@
 <% products.each do |product| %>
 	<p class="product-detail-listing">
 		<span class="product-bold-text">Product ID:</span> <%= product.id %><br>
-		<%= product.item.capitalize %>
-		
+		<%= product.item.capitalize %><br>
+		<%= link_to "Edit product?", products_path(product.id) %>
+		<%= button_to "delete", 
+        {:controller => :products, :action => 'destroy', :id => product.id }, 
+        :method => :delete, data: { confirm: "Are you sure?" } %>
+
 	</p>	
 <%end%>
