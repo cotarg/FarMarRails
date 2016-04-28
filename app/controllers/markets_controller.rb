@@ -1,9 +1,7 @@
 class MarketsController < ApplicationController
 
-  has_many :vendors
-
   def index #VIEWED BY USER
-    @markets = Market.order(name: :asc)
+    @markets = Market.order(state: :asc, city: :asc)
     render :index
   end
 
@@ -16,7 +14,7 @@ class MarketsController < ApplicationController
     @market = Market.new(create_market_params[:market])
     #unknown if need other things attached, like vendor/sales/products
     if @market.save
-      @markets = Market.all
+      @markets = Market.order(state: :asc, city: :asc)
       redirect_to markets_path
     else
       render :new
@@ -30,18 +28,19 @@ class MarketsController < ApplicationController
 
   def show
     @market = Market.find(params[:id])
+    @vendors = Vendor.where(market_id: @market.id)
     render :show
   end
 
   def update
     @market = Market.find(params[:id]).update(create_market_params[:market])
-    @markets = Market.all
+    @markets = Market.order(state: :asc, city: :asc)
     render :index  #IF time at end, render a "newly created" view for proofread, avoid list of all markets / index, because markets aren't supposed to see other markets
   end
 
   def destroy
     @market = Market.find(params[:id]).destroy
-    @markets = Market.all
+    @markets = Market.order(state: :asc, city: :asc)
     render :index  #Same as update: If time at end, render not-index
   end
 
