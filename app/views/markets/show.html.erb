@@ -4,5 +4,5 @@
 Vendors at <b><%=@market.name%></b>: <%#non-semantic, visual help only%>
 <%@vendors.each do |vendor|%>
 <br />
-<%=vendor.name%>
+<%=link_to vendor.name, products_show_path(vendor.id)%>
 <%end%>
