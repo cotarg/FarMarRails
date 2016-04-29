@@ -2,10 +2,17 @@ class SalesController < ApplicationController
 
 
 	def index
+
 	end
 
 	def new
+
 	end
+
+	def show
+    @vendor = Vendor.find(params[:id])
+    render :list_all
+  end
 
 	def create
 	end
