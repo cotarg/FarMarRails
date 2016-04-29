@@ -20,7 +20,7 @@ class SalesController < ApplicationController
 
 	def create
     @sale = Sale.create(sales_create_params[:sale])
-    redirect_to sales_path
+    redirect_to sales_show_path(@sale.vendor_id)
 	end
 
   def sales_create_params
