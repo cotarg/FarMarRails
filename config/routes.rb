@@ -5,10 +5,10 @@ Rails.application.routes.draw do
 
   get '/vendors/new', to: "vendors#new", as: "new_vendor"
   post '/vendors', to: "vendors#create"
-  get '/vendors/:id/edit', to: "vendors#edit", as: "edit_vendor"
-  patch '/vendors/:id', to: "vendors#update"
+  get '/vendors/:id/edit', to: "vendors#edit", as: "vendor"
+  patch '/vendors/:id/edit', to: "vendors#update"
   delete '/vendors/:id', to: "vendors#delete", as: "delete_vendor"
-  get '/vendors/', to: "vendors#index"
+  get '/vendors/', to: "vendors#index", as: "index_vendor"
 
   get '/products/new', to: "products#new"
   post '/products/', to: "products#create"
