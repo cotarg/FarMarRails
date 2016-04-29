@@ -11,9 +11,13 @@ class ProductsController < ApplicationController
   end
 
 	def new
+    @product = Product.new
+    render :create_product
 	end
 
 	def create
+    @product = Product.create(product_create_params[:product])
+    redirect_to products_path    
 	end
 
 	def destroy
@@ -24,11 +28,11 @@ class ProductsController < ApplicationController
 	end
 
   def product_create_params
-    params.permit(product: [:name, ]) # these need to be finished with which params need to be let through
+    params.permit(product: [:item, :vendor_id]) # these need to be finished with which params need to be let through
   end
 
   def product_update_params
-    params.permit(product: [:name, ]) # these need to be finished with which params need to be let through
+    params.permit(product: [:item, :vendor_id ]) # these need to be finished with which params need to be let through
   end
 
 end
