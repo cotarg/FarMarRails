@@ -5,6 +5,4 @@ class VendorsController < ApplicationController
 		render :login
 	end
 
-	def 
-
 end
