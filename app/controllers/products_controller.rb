@@ -21,6 +21,12 @@ class ProductsController < ApplicationController
     redirect_to products_show_path(@product.vendor_id)
 	end
 
+  def edit
+    @product = Product.find(params[:id])
+    @vendors = Vendor.new
+    render :edit
+  end
+
 	def destroy
    killed_record = Product.destroy(params[:id])
    if params[:id] = true 
