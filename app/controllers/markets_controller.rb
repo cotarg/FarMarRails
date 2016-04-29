@@ -36,6 +36,7 @@ class MarketsController < ApplicationController
   def update
     @market = Market.find(params[:id]).update(create_market_params[:market])
     @markets = Market.order(state: :asc, city: :asc)
+    @vendors = Vendor.order(name: :asc)
     render :index  #IF time at end, render a "newly created" view for proofread, avoid list of all markets / index, because markets aren't supposed to see other markets
   end
 

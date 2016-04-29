@@ -1,8 +1,7 @@
-<h1 class="vendor"><%= @vendor.name %></h1>
+<h1 class="vendor"><%= @vendor.name%></h1>
 <h2 class="">Sales</h2>
 
-<%= form_for @sales.transaction_time
-<%=options_for_select([["All Sales", *],["January Sales","2016-01*"]],["February Sales","2016-02*"]],["March Sales","2016-03*"]],["April Sales","2016-04*"]]) %>
+
 <% sales = Sale.where(vendor_id: @vendor.id) %>
 <% sales_total = 0 %>
 

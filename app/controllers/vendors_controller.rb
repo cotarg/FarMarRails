@@ -2,8 +2,8 @@ class VendorsController < ApplicationController
 
   def index
     @vendors = Vendor.select(:id, :name).order(:name)
-    render :login
-  end	
+    render :index
+  end
 
   def new
     @vendor = Vendor.new
@@ -35,7 +35,7 @@ class VendorsController < ApplicationController
   def update
     @vendor = Vendor.find(params[:id]).update(create_vendor_params[:vendor])
     @vendors = Vendor.order(state: :asc, city: :asc)
-    render :index  #IF time at end, render a "newly created" view for proofread, avoid list of all vendors / index, because vendors aren't supposed to see other vendors
+    redirect_to markets_path  #IF time at end, render a "newly created" view for proofread, avoid list of all vendors / index, because vendors aren't supposed to see other vendors
   end
 
 
