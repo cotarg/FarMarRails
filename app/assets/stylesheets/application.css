@@ -23,8 +23,12 @@
 body {
 	font: 18px Helvetica, sans-serif;
 	background-color: #FEFEFE;
-	max-width: 85%;
+	max-width: 100%;
 	margin: 0 auto;
+}
+
+.bold-text {
+	font-weight: bold;
 }
 
 /********** INDEX *********/
