@@ -1,5 +1,5 @@
 <h2><%=@market.name%></h2>
-<h3><%=@market.address%> <%=@market.city%>, <%=@market.state%> <%=@market.zip_code%></h3>
+<address><%=@market.address%> <%=@market.city%>, <%=@market.state%> <%=@market.zip_code%></address><br>
 
 Vendors at <b><%=@market.name%></b>: <%#non-semantic, visual help only%>
 <%@vendors.each do |vendor|%>
