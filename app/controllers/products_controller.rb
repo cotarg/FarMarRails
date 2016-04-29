@@ -11,13 +11,14 @@ class ProductsController < ApplicationController
   end
 
 	def new
+    @vendors = Vendor.select(:id, :name).order(:name)
     @product = Product.new
     render :create_product
 	end
 
 	def create
     @product = Product.create(product_create_params[:product])
-    redirect_to products_path    
+    redirect_to products_show_path(@product.vendor_id)
 	end
 
 	def destroy
