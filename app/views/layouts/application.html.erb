@@ -12,19 +12,23 @@
     <nav>
       <ul>
         <li>
-          <a href="markets_path">All Markets and vendors</a>
+          <%= link_to "All Markets and Vendors", markets_path %>
         </li>
         <li>
-          <a href="products_path">All Products</a>
+          <%= link_to "All Products", products_path %>
         </li>
         <li>
-          <a href="sales_path">Sales</a>
+          <%= link_to "Sales", sales_path %>
         </li>
       </ul>
     </nav>
   </header>
 
 <%= yield %>
+
+<footer>
+  Farmers Market Finder made possible by <%= link_to "Ada Developers Academy", "http://adadevelopersacademy.org/" %>
+</footer>
 
 </body>
 </html>
