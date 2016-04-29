@@ -6,6 +6,11 @@ a {
 	color: #6C5235;
 }
 
+button {
+	float: right;
+	margin: -1rem;
+}
+
 .market {
   padding: 1rem;
 }
@@ -45,5 +50,9 @@ a {
 	border-radius: 50rem;
 	text-decoration: none;
 	font-size: 20px;
+}
+
+.body-columns {
+	display: flex;
 }
 
