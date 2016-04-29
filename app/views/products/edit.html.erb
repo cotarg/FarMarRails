@@ -1,0 +1,13 @@
+<%= form_for @product do |f| %>
+
+	<%= f.hidden_field :id %>
+
+  <%= f.label :item %>
+  <%= f.text_field :item %><br>
+
+  <%= f.label :vendor_id %>
+  <%= f.collection_select(:vendor_id, @vendors, :id, :name) %>
+
+  <%= f.submit %>
+
+<% end %>
