@@ -22,7 +22,9 @@
 
 body {
 	font: 18px Helvetica, sans-serif;
-	background-color: #EEEEEE;
+	background-color: #FEFEFE;
+	max-width: 85%;
+	margin: 0 auto;
 }
 
 /********** INDEX *********/
