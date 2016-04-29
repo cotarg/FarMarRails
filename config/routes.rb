@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   delete '/products/:id', to: "products#destroy"
 
   get '/sales/new', to: "sales#new"
-  get '/sales/:id', to: "sales#show"
+  get '/sales/:id', to: "sales#show", as: "sales_show"
   post '/sales/', to: "sales#create"
   get '/sales/', to: "sales#index"
 
