@@ -27,6 +27,12 @@ class ProductsController < ApplicationController
     render :edit
   end
 
+  def update
+    @product = Product.find(params[:id])
+    @product.update(product_update_params[:task])
+    redirect_to products_path
+  end
+
 	def destroy
    killed_record = Product.destroy(params[:id])
    if params[:id] = true 
