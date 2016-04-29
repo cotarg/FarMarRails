@@ -2,7 +2,8 @@ class SalesController < ApplicationController
 
 
 	def index
-
+		@vendor = Vendor.all
+    render :list_all
 	end
 
 	def new
