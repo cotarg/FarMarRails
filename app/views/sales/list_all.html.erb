@@ -9,7 +9,7 @@
 <% sales.each do |sale| %>
 	<p class="sale-detail-listing">
 		<% sales_total += sale.sale_amount.to_i %>
-		Sale ID: <%= sale.sale_id %><br>
+		Sale ID: <%= sale.id %><br>
     Sale Amount in Cents: <%= sale.sale_amount %><br>
     Sale Date: <%= sale.transaction_time %><br>
     Sale Product: <%= sale.product_id %><br>
